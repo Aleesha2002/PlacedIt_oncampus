@@ -36,21 +36,21 @@ function Header({ user, profileInfo }) {
       path: "/activity",
       show: profileInfo?.role === "candidate",
     },
-    {
-      label: "Companies",
-      path: "/companies",
-      show: profileInfo?.role === "candidate",
-    },
+    // {
+    //   label: "Companies",
+    //   path: "/companies",
+    //   show: profileInfo?.role === "candidate",
+    // },
     {
       label: "Jobs",
       path: "/jobs",
       show: profileInfo,
     },
-    {
-      label: "Membership",
-      path: "/membership",
-      show: profileInfo,
-    },
+    // {
+    //   label: "Membership",
+    //   path: "/membership",
+    //   show: profileInfo,
+    // },
     {
       label: "Account",
       path: "/account",
@@ -70,7 +70,7 @@ function Header({ user, profileInfo }) {
           </SheetTrigger>
           <SheetContent side="left">
             <Link className="mr-6 hidden lg:flex" href={"#"}>
-              <h3>JOBSCO</h3>
+              <h3>PlacedIt</h3>
             </Link>
             <div className="grid gap-2 py-6">
               {menuItems.map((menuItem) =>
@@ -93,7 +93,7 @@ function Header({ user, profileInfo }) {
           </SheetContent>
         </Sheet>
         <Link className="hidden font-bold text-3xl lg:flex mr-6" href={"/"}>
-          JOBSCO
+          PlacedIt
         </Link>
         <nav className="ml-auto hidden lg:flex gap-6 items-center">
           {menuItems.map((menuItem) =>

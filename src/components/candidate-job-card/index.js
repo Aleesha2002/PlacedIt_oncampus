@@ -24,15 +24,15 @@ function CandidateJobCard({ jobItem, profileInfo, jobApplications }) {
   const { toast } = useToast();
 
   async function handlejobApply() {
-    if (!profileInfo?.isPremiumUser && jobApplications.length >= 2) {
-      setShowJobDetailsDrawer(false);
-      toast({
-        variant: "destructive",
-        title: "You can apply max 2 jobs.",
-        description: "Please opt for membership to apply for more jobs",
-      });
-      return;
-    }
+    // if (!profileInfo?.isPremiumUser && jobApplications.length >= 2) {
+    //   setShowJobDetailsDrawer(false);
+    //   toast({
+    //     variant: "destructive",
+    //     title: "You can apply max 2 jobs.",
+    //     description: "Please opt for membership to apply for more jobs",
+    //   });
+    //   return;
+    // }
 
     await createJobApplicationAction(
       {

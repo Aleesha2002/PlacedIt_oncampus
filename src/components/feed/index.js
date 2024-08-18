@@ -97,7 +97,7 @@ function Feed({ user, profileInfo, allFeedPosts }) {
   }, [imageData]);
 
   console.log(allFeedPosts);
-
+  console.log(user);
   return (
     <Fragment>
       <div className="mx-auto max-w-7xl">
@@ -106,12 +106,15 @@ function Feed({ user, profileInfo, allFeedPosts }) {
             Explore Feed
           </h1>
           <div className="flex items-center">
-            <Button
-              onClick={() => setShowPostDialog(true)}
-              className="flex h-11 items-center justify-center px-5"
-            >
-              Add New Post
-            </Button>
+            {user.emailAddresses[0].emailAddress ===
+              "aleesha.seema02@gmail.com" && (
+              <Button
+                onClick={() => setShowPostDialog(true)}
+                className="flex h-11 items-center justify-center px-5"
+              >
+                Add New Post
+              </Button>
+            )}
           </div>
         </div>
         <div className="py-12">
@@ -120,7 +123,7 @@ function Feed({ user, profileInfo, allFeedPosts }) {
               allFeedPosts.map((feedPostItem) => (
                 <div
                   key={feedPostItem._id}
-                  className="group relative -mx-4 p-6 rounded-3xl bg-gray-100 hover:bg-white hover:shadow-2xl cursor-auto shadow-2xl shadow-transparent gap-8 flex"
+                  className="group relative -mx-4 p-6 rounded-3xl bg-gray-100 hover:bg-white hover:shadow-2xl cursor-auto shadow-2xl shadow-transparent gap-8 flex mt-3"
                 >
                   <div className="sm:w-2/6 rounded-3xl overflow-hidden transition-all duration-500 group-hover:rounded-xl">
                     <img
