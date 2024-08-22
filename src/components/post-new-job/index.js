@@ -26,15 +26,15 @@ function PostNewJob({ profileInfo, user, jobList }) {
   }
 
   function handleAddNewJob() {
-    if (!profileInfo?.isPremiumUser && jobList.length >= 2) {
-      toast({
-        variant: "destructive",
-        title: "You can post max 2 jobs.",
-        description: "Please opt for membership to post more jobs",
-      });
-      return;
-    }
-    setShowJobDialog(true);
+    // if (!profileInfo?.isPremiumUser && jobList.length >= 2) {
+    //   toast({
+    //     variant: "destructive",
+    //     title: "You can post max 2 jobs.",
+    //     description: "Please opt for membership to post more jobs",
+    //   });
+    //   return;
+    // }
+    // setShowJobDialog(true);
   }
 
   async function createNewJob() {
